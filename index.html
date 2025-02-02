@@ -29,25 +29,26 @@
 			<h2>Coding Semantic and Accessible Forms!</h2>
 			<p>Today we'll be focusing on coding a form that is accessible and semantic, and we'll also briefly discuss skip links for your website. Forms can be a source of frustration for users, whether they specifically need help with accessing your website or if they just prefer that your forms be easy to use and submit. Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
 
-			<form action="https://wp.zybooks.com/form-viewer.php" method="POST">
-			
+			<form action="https://wp.zybooks.com/form-viewer.php" method="POST" autocomplete="on">
+        
+				<!-- Full Name -->
 				<label for="full-name">Full Name <span class="required">*</span></label>
-				<input type="text" id="full-name" name="full_name" required autocomplete="name" aria-required="true">
+				<input type="text" id="full-name" name="full_name" required autocomplete="name" placeholder="John Doe">
 				<br><br>
 		
-			
+				<!-- Email Address -->
 				<label for="email">Email Address <span class="required">*</span></label>
-				<input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+				<input type="email" id="email" name="email" required autocomplete="email" placeholder="example@example.com">
 				<br><br>
 		
-				
+				<!-- Phone Number -->
 				<label for="phone">Phone Number <span class="required">*</span></label>
-				<input type="tel" id="phone" name="phone" required autocomplete="tel" aria-required="true">
+				<input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="123-456-7890">
 				<br><br>
 		
-			
+				<!-- Preferred Contact Method -->
 				<fieldset>
-					<legend>Preferred Method of Contact <span class="required">*</span></legend>
+					<legend>Preferred Contact Method <span class="required">*</span></legend>
 					<input type="radio" id="contact-email" name="contact_method" value="email" required>
 					<label for="contact-email">Email</label>
 					<br>
@@ -55,9 +56,9 @@
 					<label for="contact-phone">Phone</label>
 				</fieldset>
 		
-			
+				<!-- State Selection -->
 				<label for="state">State of Residence <span class="required">*</span></label>
-				<select id="state" name="state" required aria-required="true">
+				<select id="state" name="state" required autocomplete="address-level1">
 					<option value="" disabled selected>Select your state</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -112,13 +113,14 @@
 				</select>
 				<br><br>
 		
-			
+				<!-- Comments -->
 				<label for="comments">Comments</label>
 				<textarea id="comments" name="comments" rows="4" placeholder="Enter any comments here..."></textarea>
 				<br><br>
 		
-				
+				<!-- Submit Button -->
 				<button type="submit">Submit</button>
+				
 			</form>
 		</article>
 	</main>
